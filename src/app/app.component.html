@@ -1,0 +1,38 @@
+
+<nav class="navbar navbar-expand-sm bg-light">
+
+    <a class="nav-link" href="#">Crud example angular 11 with firebase</a>
+  
+</nav>
+
+<div class="container">
+    <h4>Enter your infos</h4>
+    <form >
+            <div class="form-group">
+                <label for="name">Employee name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" name="name" [(ngModel)]="employeeName">
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="text" class="form-control" id="age" placeholder="Enter age" name="age" [(ngModel)]="age">
+            </div>
+
+            <div class="form-group">
+                <label for="adress">Adress:</label>
+                <input type="text" class="form-control" id="adress" placeholder="Enter Adress" name="adress" [(ngModel)]="adress">
+            
+            </div>
+
+            <div class="submit"> 
+                <button type="submit" class="btn btn-primary"  [disabled]="!age || !employeeName || !adress" (click)=" addEmp()">Create Employee</button>
+            </div>
+
+            <div class="alert" *ngIf="bool"> 
+                <div class="alert alert-success" role="alert">
+                {{message}}
+                </div>
+            </div>
+    </form>
+    
+</div>
+  

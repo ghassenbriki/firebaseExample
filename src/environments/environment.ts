@@ -9,14 +9,13 @@ export const environment = {
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     firebase:
     {
-    apiKey: "AIzaSyCGAQzgBr1zerEzEZf8s26TBy0bYdGsjeI",
-    authDomain: "angular11project.firebaseapp.com",
-    databaseUrl:"https://angular11project-default-rtdb.firebaseio.com/",
-    projectId: "angular11project",
-    storageBucket: "angular11project.appspot.com",
-    messagingSenderId: "1012987922298",
-    appId: "1:1012987922298:web:246acb366fdf2dae0fb8c3",
-    measurementId: "G-YJTQD3KT5K"
+      apiKey: "AIzaSyCEUKZ-5gkam_UelU2uSkaD7dwuT6kpk1A",
+      authDomain: "angular11-8245a.firebaseapp.com",
+      projectId: "angular11-8245a",
+      storageBucket: "angular11-8245a.appspot.com",
+      messagingSenderId: "612036797827",
+      appId: "1:612036797827:web:8f42bef432b98b2d4e82b6",
+      measurementId: "G-4PX24WQE1Y"
   }
 }
 

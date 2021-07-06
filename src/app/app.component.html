@@ -14,7 +14,7 @@
             </div>
             <div class="form-group">
                 <label for="age">Age:</label>
-                <input type="text" class="form-control" id="age" placeholder="Enter age" name="age" [(ngModel)]="age">
+                <input type="number" class="form-control" id="age" placeholder="Enter age" name="age" [(ngModel)]="age">
             </div>
 
             <div class="form-group">
@@ -33,6 +33,84 @@
                 </div>
             </div>
     </form>
+
+
+  
+
+        <div class="col-md-12">
+            <h4>List of Employees </h4>
+        </div>
+
+    <div class="row p-2">
+        <div class="col-md-3 col-sm-12" *ngFor="let emp of employee" >
+            <div class="card" *ngIf="!emp.edited; else elseblock">
+                <div class="card-body">
+                        <div class="card-title">
+                            Name: {{emp.name}}
+                        </div>
+
+                        <div class="card-subtitle">
+                            Age: {{emp.age}}
+                        </div>
+
+                        <div class="card-text">
+                            Adress: {{emp.adress}}
+                     
+                         </div>
+                         <span >
+                               <a class="btn btn-primary btn-sm" (click)="setEmp(emp)"> Edit</a>
+                               <a class="btn btn-danger btn-sm" (click)="deleteEmp(emp.id)"> Delete</a> 
+                         </span>
+
+                </div>
+            </div>
+
+            <ng-template #elseblock>
+
+                <div class="card" >
+                    <div class="card-body">
+                            <div class="card-title">
+                                Edit employee
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <input type="text" [(ngModel)]="emp.editedName"> 
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="text" [(ngModel)]="emp.editedAge"> 
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="text" [(ngModel)]="emp.editedAdress"> 
+                                </div>
+
+
+                            </div>
+
+
+                        
+
+
+                         <span >
+                                <a class="btn btn-success btn-sm" (click)="updateEmp(emp)"> Update</a>
+                                <a class="btn btn-danger btn-sm" (click)="emp.edited=false"> Cancel</a> 
+                         </span>
+    
+                    </div>
+                </div>
+    
+
+
+
+            </ng-template>
+
+
+        </div>
+    </div>
+      
+
+
+
     
 </div>
-  
+

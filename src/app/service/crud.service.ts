@@ -15,4 +15,21 @@ export class CrudService {
       return this.fireStore.collection('employee').add(record);
   }
 
+  displayEmployee()
+  {
+    return this.fireStore.collection('employee').get()
+  }
+
+  updateEmployee(empID,emp)
+  {
+  this.fireStore.doc('employee/'+empID).update(emp)
+
+  }
+
+  deleteEmployee(empID)
+  {
+    this.fireStore.doc('employee/'+empID).delete()
+
+  }
+
 }
